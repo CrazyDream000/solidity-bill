@@ -53,7 +53,11 @@ contract DeployDiamondScript is Script {
             functionSelectors: bondFacet.getSelectors()
         });
 
-
+        DiamondArgs memory da = DiamondArgs({
+            owner: owner,
+            init: diamondInitAddress,
+            initCalldata: abi.encodeWithSelector(bytes4(keccak256("init()")))
+        });
 
     }
 }
