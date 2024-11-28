@@ -47,7 +47,11 @@ contract DeployDiamondScript is Script {
             functionSelectors: diamondLoupeFacet.getSelectors()
         });
 
-
+        cuts[2] = IDiamond.FacetCut({
+            facetAddress: bondFacetAddress,
+            action: IDiamond.FacetCutAction.Add,
+            functionSelectors: bondFacet.getSelectors()
+        });
 
         DiamondArgs memory da = DiamondArgs({
             owner: owner,
