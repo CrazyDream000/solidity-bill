@@ -59,7 +59,7 @@ contract DeployDiamondScript is Script {
             initCalldata: abi.encodeWithSelector(bytes4(keccak256("init()")))
         });
 
-
+        Diamond diamond = new Diamond(cuts, da);
 
 
 
