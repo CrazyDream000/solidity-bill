@@ -64,5 +64,6 @@ contract DeployDiamondScript is Script {
 
         new GenericToken("GenericToken", "GT");
 
+        vm.stopBroadcast();
     }
 }
