@@ -60,7 +60,7 @@ contract DeployDiamondScript is Script {
         });
 
         Diamond diamond = new Diamond(cuts, da);
-
+        address diamondAddress = address(diamond);
 
 
 
